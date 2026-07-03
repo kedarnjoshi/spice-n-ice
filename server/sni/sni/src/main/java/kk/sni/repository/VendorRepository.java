@@ -1,9 +1,9 @@
 package kk.sni.repository;
 
-import kk.sni.model.EventVendor;
+import kk.sni.model.Vendor;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface EventVendorRepository extends JpaRepository<EventVendor,Long> {
+public interface VendorRepository extends JpaRepository<Vendor,Long> {
 }
