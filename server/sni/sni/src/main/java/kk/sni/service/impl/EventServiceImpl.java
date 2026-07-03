@@ -4,6 +4,7 @@ import kk.sni.dto.CreateEventRequest;
 import kk.sni.dto.EventDTO;
 import kk.sni.model.Event;
 import kk.sni.model.EventStatus;
+import kk.sni.model.EventType;
 import kk.sni.model.Venue;
 import kk.sni.repository.EventRepository;
 import kk.sni.repository.VenueRepository;
@@ -46,7 +47,7 @@ public class EventServiceImpl implements EventService {
                 .orElseThrow(() -> new RuntimeException("Venue not found"));
 
         Event event = new Event();
-        event.setName(request.getName());
+        event.setEventType(EventType.valueOf(request.getType().toUpperCase()));
         event.setClientName(request.getClientName());
         event.setClientEmail(request.getClientEmail());
         event.setVenue(venue);
@@ -71,7 +72,7 @@ public class EventServiceImpl implements EventService {
     private EventDTO mapToDTO(Event event) {
         EventDTO dto = new EventDTO();
         dto.setId(event.getId());
-        dto.setName(event.getName());
+        dto.setEventType(event.getEventType());
         dto.setClientName(event.getClientName());
         dto.setClientEmail(event.getClientEmail());
         dto.setEventStatus(event.getEventStatus());

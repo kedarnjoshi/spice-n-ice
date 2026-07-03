@@ -1,0 +1,15 @@
+package kk.sni.model;
+
+public enum EventType {
+    WEDDING,
+    ENGAGEMENT,
+    MUNJ,
+    BABY_SHOWER,
+    NAMING_CEREMONY,
+    BIRTHDAY_PARTY,
+    RETIREMENT_FUNCTION,
+    CORPORATE_EVENTS,
+    RECEPTION,
+    ANNIVERSARY,
+    OTHER
+}

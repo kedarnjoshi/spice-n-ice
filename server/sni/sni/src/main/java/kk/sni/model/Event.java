@@ -20,7 +20,8 @@ public class Event {
     private Venue venue;
 
     @Column(nullable = false)
-    private String name;
+    @Enumerated(EnumType.STRING)
+    private EventType eventType;
 
     @Column(nullable=false)
     private String clientName;

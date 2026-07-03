@@ -4,7 +4,7 @@ import lombok.Data;
 
 @Data
 public class CreateEventRequest {
-    private String name;
+    private String type;
     private String clientName;
     private String clientEmail;
     private Long venueId;

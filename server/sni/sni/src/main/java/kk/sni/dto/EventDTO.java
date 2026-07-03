@@ -1,12 +1,13 @@
 package kk.sni.dto;
 
 import kk.sni.model.EventStatus;
+import kk.sni.model.EventType;
 import lombok.Data;
 
 @Data
 public class EventDTO {
     private Long id;
-    private String name;
+    private EventType eventType;
     private String clientName;
     private String clientEmail;
     private String miscText;
