@@ -16,7 +16,7 @@ public class Event {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name="venue_id")
+    @JoinColumn(name="venue_id", nullable=false)
     private Venue venue;
 
     @Column(nullable = false)
@@ -30,10 +30,10 @@ public class Event {
 
     private String miscText;
 
-    @Column(nullable = false)
-    private String status; // Confirmed, Quoted, In Progress
-
     private Integer guestCount;
 
     private LocalDateTime createdAt;
+
+    @Enumerated(EnumType.STRING)
+    private EventStatus eventStatus;
 }
