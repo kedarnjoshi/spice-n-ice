@@ -1,0 +1,25 @@
+version: "3"
+
+services:
+  postgres:
+    image: "postgres:16"
+    container_name: utsav_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: localpassword
+      POSTGRES_DB: utsav_db
+    ports:
+      - "5434:5432"
+
+
+
+  redis:
+    image: redis:7
+    container_name: utsav_redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+
+volumes:
+  utsav_pgdata:
