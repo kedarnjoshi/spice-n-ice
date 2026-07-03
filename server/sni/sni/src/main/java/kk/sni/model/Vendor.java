@@ -16,4 +16,9 @@ public class Vendor {
     private String name;
 
     private String email;
+
+    private String phoneNumber;
+
+    @Column(nullable = false)
+    private String vendorType; // Caterer, Photographer, DJ, Decorator etc.
 }

@@ -4,6 +4,9 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
+import java.util.Set;
+
 @Data
 @Entity
 @NoArgsConstructor
@@ -16,6 +19,7 @@ public class Event {
     @JoinColumn(name="venue_id")
     private Venue venue;
 
+    @Column(nullable = false)
     private String name;
 
     @Column(nullable=false)
@@ -25,4 +29,11 @@ public class Event {
     private String clientEmail;
 
     private String miscText;
+
+    @Column(nullable = false)
+    private String status; // Confirmed, Quoted, In Progress
+
+    private Integer guestCount;
+
+    private LocalDateTime createdAt;
 }

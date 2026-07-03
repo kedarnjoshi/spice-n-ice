@@ -21,5 +21,9 @@ public class Payment {
 
     @ManyToOne
     @JoinColumn(nullable = false, name = "event_id")
-    private Event role;
+    private Event event;
+
+    @Column(nullable = false)
+    @Enumerated(EnumType.STRING)
+    private PaymentStatus paymentStatus;
 }

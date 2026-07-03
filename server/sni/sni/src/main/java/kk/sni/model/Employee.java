@@ -4,14 +4,15 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Set;
+
 @Entity
 @Data
 @NoArgsConstructor
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(nullable = false)
-    private Integer id;
+    private Long id;
 
     @Column(nullable = false)
     private String firstName;
@@ -32,5 +33,9 @@ public class Employee {
     @Enumerated(EnumType.STRING)
     private Gender gender;
 
-    private boolean isActive;
+    private Boolean isActive = true;
+
+    @Column(nullable = false)
+    private String googleId;
+
 }

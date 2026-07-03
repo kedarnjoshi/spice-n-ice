@@ -13,11 +13,11 @@ public class EventVendor {
     private Long id;
 
     @JoinColumn(name = "event_id")
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     private Event event;
 
     @JoinColumn(name="vendor_id")
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     private Vendor vendor;
 
     @Column(nullable = false)
