@@ -72,7 +72,7 @@ public class EventServiceImpl implements EventService {
     private EventDTO mapToDTO(Event event) {
         EventDTO dto = new EventDTO();
         dto.setId(event.getId());
-        dto.setEventType(event.getEventType());
+        dto.setType(event.getEventType());
         dto.setClientName(event.getClientName());
         dto.setClientEmail(event.getClientEmail());
         dto.setEventStatus(event.getEventStatus());

@@ -7,7 +7,7 @@ import lombok.Data;
 @Data
 public class EventDTO {
     private Long id;
-    private EventType eventType;
+    private EventType type;
     private String clientName;
     private String clientEmail;
     private String miscText;

@@ -13,16 +13,17 @@ export interface CreateVenueRequest {
 // ── Event ────────────────────────────────────────────────────────
 export interface Event {
     id: number;
-    name: string;
+    // name: string;
     type: string;
     clientName: string;
     clientEmail: string;
-    venueId: number;
+    miscText?: string;
+    // venueId: number;
     venueName: string;
     venueCity: string;
     guestCount: number;
     eventStatus: EventStatus;
-    miscText?: string;
+
 }
 
 export type EventStatus =
