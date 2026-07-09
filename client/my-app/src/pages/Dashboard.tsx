@@ -381,7 +381,7 @@ export default function Dashboard() {
                                         <span style={{ fontSize: 16 }}>{eventTypeEmoji(e.type)}</span>
                                         {" "}
                                         <span style={{ color: C.muted, fontSize: 12 }}>
-                        {e.type.replace(/_/g, " ")}
+                        {(e.type ?? "UNKNOWN").replace(/_/g, " ")}
                       </span>
                                     </td>
                                     <td style={{ color: C.muted, fontSize: 12, padding: "12px 8px 12px 0" }}>
